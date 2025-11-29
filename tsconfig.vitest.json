@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.app.json",
+  "compilerOptions": {
+    "lib": ["ES2024"],
+    "paths": {
+      "~/*": ["./src/*"]
+    },
+    "types": ["node", "jsdom"]
+  },
+  "include": ["test/**/*.ts"],
+  "exclude": []
+}

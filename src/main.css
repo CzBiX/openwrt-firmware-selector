@@ -1,0 +1,8 @@
+body {
+  background-color: var(--p-content-background);
+  overflow-y: scroll;
+}
+
+.p-button-icon-only {
+  height: var(--p-button-icon-only-width);
+}

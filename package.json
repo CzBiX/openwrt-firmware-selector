@@ -1,0 +1,57 @@
+{
+  "type": "module",
+  "private": true,
+  "packageManager": "pnpm@10.12.1",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --fix --cache",
+    "typecheck": "vue-tsc",
+    "preview": "vite preview",
+    "test": "vitest",
+    "up": "taze major -I",
+    "size": "npx vite-bundle-analyzer",
+    "postinstall": "npx simple-git-hooks"
+  },
+  "dependencies": {
+    "@primeuix/themes": "catalog:frontend",
+    "@vueuse/core": "catalog:frontend",
+    "fuzzysort": "catalog:frontend",
+    "primevue": "catalog:frontend",
+    "vue": "catalog:frontend",
+    "vue-i18n": "catalog:frontend"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "catalog:dev",
+    "@iconify-json/carbon": "catalog:dev",
+    "@intlify/eslint-plugin-vue-i18n": "catalog:dev",
+    "@intlify/unplugin-vue-i18n": "catalog:dev",
+    "@primevue/auto-import-resolver": "catalog:dev",
+    "@tsconfig/node24": "catalog:dev",
+    "@types/jsdom": "catalog:dev",
+    "@types/node": "catalog:dev",
+    "@unocss/eslint-plugin": "catalog:dev",
+    "@vitejs/plugin-vue": "catalog:dev",
+    "@vue/test-utils": "catalog:dev",
+    "@vue/tsconfig": "catalog:dev",
+    "eslint": "catalog:dev",
+    "eslint-plugin-format": "catalog:dev",
+    "jsdom": "catalog:dev",
+    "lint-staged": "catalog:dev",
+    "simple-git-hooks": "catalog:dev",
+    "taze": "catalog:dev",
+    "typescript": "catalog:dev",
+    "unocss": "catalog:dev",
+    "unplugin-auto-import": "catalog:dev",
+    "unplugin-vue-components": "catalog:dev",
+    "vite": "catalog:dev",
+    "vitest": "catalog:dev",
+    "vue-tsc": "catalog:dev"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}

@@ -1,0 +1,33 @@
+allDownloads: すべてのダウンロード
+buildInfo: ビルド情報
+buildOutput: ビルド出力
+clear: クリア
+copy: コピー
+customBuild: カスタムビルド
+date: 日付
+deviceWiki: デバイスウィキ
+directLink: 直接リンク
+downloadFirmwareForDevice: デバイス用の {brand_name} ファームウェアをダウンロード
+downloadImages: 画像をダウンロードする
+downloadPage: ダウンロードページ
+enterYourScriptHere: ここにスクリプトを入力してください
+error:
+  fetchBuildInfoFailed: ビルド情報の取得に失敗しました
+includedPackages: 同梱パッケージ
+inputPackagesHere: ここにパッケージを入力します
+kernel: カーネル
+language: 言語
+links: リンク
+loadTemplate: テンプレートをロードする
+model: モデル
+packageManifest: パッケージマニフェスト
+pageTitle: '{brand_name} ファームウェア セレクター'
+platform: プラットフォーム
+requestBuild: ビルドをリクエストする
+reset: リセット
+scriptToRunOnFirstBoot: 初回起動時に実行するスクリプト
+searchTips: デバイスの名前またはモデルを入力し、安定したビルドまたは夜間の「{'snapshot'}」ビルドを選択します。
+tag:
+  stable: 安定した
+version: バージョン
+remove: 取り除く

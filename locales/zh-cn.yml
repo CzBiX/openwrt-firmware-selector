@@ -1,0 +1,33 @@
+date: 日期
+kernel: 核心
+links: 链接
+model: 型号
+platform: 平台
+tag:
+  stable: 稳定
+version: 版本
+allDownloads: 所有下载
+buildInfo: 构建信息
+downloadFirmwareForDevice: 为您的设备下载 {brand_name} 固件
+pageTitle: '{brand_name} 固件选择器'
+searchTips: 输入设备的名称或型号，然后选择稳定版本或每日“{'snapshot'}”版本。
+enterYourScriptHere: 在此输入您的脚本
+error:
+  fetchBuildInfoFailed: 无法获取构建信息
+includedPackages: 包含的软件包
+loadTemplate: 载入模板
+requestBuild: 请求构建
+scriptToRunOnFirstBoot: 首次启动时运行的脚本
+clear: 清空
+copy: 复制
+customBuild: 定制构建
+reset: 重置
+language: 语言
+directLink: 直接链接
+downloadPage: 下载页面
+deviceWiki: 设备维基
+packageManifest: 包清单
+downloadImages: 下载镜像
+buildOutput: 构建输出
+inputPackagesHere: 在此输入软件包
+remove: 移除

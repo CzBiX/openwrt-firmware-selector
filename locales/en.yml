@@ -1,0 +1,35 @@
+model: Model
+version: Version
+tag:
+  stable: Stable
+error:
+  fetchBuildInfoFailed: Failed to fetch build info
+platform: Platform
+kernel: Kernel
+date: Date
+links: Links
+downloadImages: Download images
+allDownloads: All Downloads
+buildInfo: Build info
+downloadFirmwareForDevice: Download {brand_name} firmware for your device
+pageTitle: '{brand_name} Firmware Selector'
+searchTips: >-
+  Type the name or model of your device, then select a stable build or the
+  nightly "{'snapshot'}" build.
+loadTemplate: Load template
+enterYourScriptHere: Enter your script here
+requestBuild: Request build
+includedPackages: Included packages
+scriptToRunOnFirstBoot: Script to run on first boot
+customBuild: Custom build
+clear: Clear
+reset: Reset
+copy: Copy
+language: Language
+downloadPage: Download page
+deviceWiki: Device Wiki
+directLink: Direct link
+packageManifest: Package manifest
+buildOutput: Build output
+inputPackagesHere: Input packages here
+remove: Remove
