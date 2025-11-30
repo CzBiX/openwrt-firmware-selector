@@ -131,37 +131,45 @@ function handlePaste(event: ClipboardEvent) {
 
 const inputRef = shallowRef<HTMLInputElement>()
 
-function getChipStyle(chip: PackageChip) {
-  let token: string | null = null
-
-  switch (chip.type) {
-    case 'default':
-      token = 'info'
-      break
-    case 'profile':
-      token = 'warn'
-      break
-    default:
-      token = 'success'
-      break
-  }
-
+function getColorStyles() {
   const getColorValue = (token: string, type: string) =>
     ($dt(`message.${token}.${type}`).value as any)?.dark.value
 
-  if (token) {
-    return {
-      backgroundColor: getColorValue(token, 'background'),
-      color: getColorValue(token, 'color'),
-    }
+  const styles: Record<string, string> = {}
+  const typeSeverity: [string, string][] = [
+    ['default', 'info'],
+    ['profile', 'warn'],
+    ['user', 'success'],
+  ]
+
+  for (const [type, severity] of typeSeverity) {
+    const bgColor = getColorValue(severity, 'background')
+    const color = getColorValue(severity, 'color')
+
+    styles[`--pkg-chip-${type}-bg`] = bgColor
+    styles[`--pkg-chip-${type}-color`] = color
   }
 
-  return null
+  return styles
+}
+
+function getChipStyle(chip: PackageChip) {
+  const token = chip.type ? chip.type : 'user'
+
+  return {
+    'background-color': `var(--pkg-chip-${token}-bg)`,
+    'color': `var(--pkg-chip-${token}-color)`,
+  }
 }
 </script>
 
 <template>
-  <div class="p-textarea p-textarea-sm flex flex-wrap gap-2" tabindex="0" @focus="inputRef?.focus()">
+  <div
+    class="p-textarea p-textarea-sm flex flex-wrap gap-2"
+    tabindex="0"
+    :style="getColorStyles()"
+    @focus="inputRef?.focus()"
+  >
     <div
       v-for="item in chipItems"
       :key="item.name"
