@@ -35,3 +35,4 @@ inputPackagesHere: Input packages here
 remove: Remove
 advancedOptions: Advanced options
 rootFsSize: Root FS Size
+rootFsSizeTips: Changing root file system size often causes sysupgrade to lose your configuration, always remember to back it up.

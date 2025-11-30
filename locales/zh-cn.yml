@@ -32,4 +32,5 @@ buildOutput: 构建输出
 inputPackagesHere: 在此输入软件包
 remove: 移除
 advancedOptions: 高级选项
-rootFsSize: root FS 大小
+rootFsSize: 根文件系统大小
+rootFsSizeTips: 更改根文件系统大小通常会导致 sysupgrade 丢失您的配置，请务必记住对其进行备份。

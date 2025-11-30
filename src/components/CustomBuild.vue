@@ -113,11 +113,18 @@ const buildRequestParams = computed(() => {
         class="h-40 max-h-80"
       />
       <Panel :header="$t('advancedOptions')" toggleable collapsed>
-        <div class="pt-8">
-          <FloatLabel>
-            <InputNumber id="root_fs_size" v-model="rootFsSize" suffix="MB" />
+        <div class="pt-8 flex gap-4">
+          <FloatLabel class="self-start">
+            <InputNumber
+              id="root_fs_size"
+              v-model="rootFsSize"
+              suffix="MB"
+            />
             <label for="root_fs_size">{{ $t('rootFsSize') }}</label>
           </FloatLabel>
+          <Message severity="warn" class="flex-1">
+            {{ $t('rootFsSizeTips') }}
+          </Message>
         </div>
       </Panel>
       <slot
