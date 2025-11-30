@@ -1,8 +1,12 @@
-# OP Firmware Selector
+# OpenWrt Firmware Selector
 
 Another firmware selector for OpenWRT, built with Vue 3 + PrimeVue.
 
-## Project Setup
+## Configuration
+
+See `.env.example` for all available environment variables. You can copy it to `.env.local` and adjust values for your environment.
+
+## Setup
 
 ```sh
 pnpm install
