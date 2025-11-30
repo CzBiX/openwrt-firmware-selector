@@ -5,8 +5,11 @@ export function formatProfileTitle(title: ProfileTitle): string {
     return title.title
   }
 
-  const base = `${title.vendor} ${title.model}`
-  return title.variant ? `${base} (${title.variant})` : base
+  return [
+    title.vendor,
+    title.model,
+    title.variant,
+  ].filter(Boolean).join(' ')
 }
 
 export function formatTimestamp(epochSeconds: number): string {
