@@ -31,3 +31,5 @@ downloadImages: 下载镜像
 buildOutput: 构建输出
 inputPackagesHere: 在此输入软件包
 remove: 移除
+advancedOptions: 高级选项
+rootFsSize: root FS 大小

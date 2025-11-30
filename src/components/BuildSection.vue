@@ -109,14 +109,16 @@ function handleBuildStarted() {
 
   <template v-if="data">
     <CustomBuild :default-packages="data.default_packages" :profile-packages="data.device_packages">
-      <template #footer="scope">
+      <template #footer="{ params }">
         <ImageBuilder
           :request="{
             version: props.version,
             target: props.profile.target,
             profile: props.profile.id,
-            packages: scope.packages,
-            defaults: scope.uciScript,
+            defaults: '',
+            packages: [],
+            rootfs_size_mb: null,
+            ...params,
           }"
           @build-started="handleBuildStarted"
           @build-finished="customBuildInfo = $event"

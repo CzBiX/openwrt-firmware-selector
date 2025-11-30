@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { BuildRequest } from '~/utils/asu'
 import config from '~/config'
 
 const props = defineProps<{
@@ -8,6 +9,7 @@ const props = defineProps<{
 
 const uciScript = ref('')
 const collapsed = ref(true)
+const rootFsSize = ref<number | null>(null)
 
 const {
   data: templateData,
@@ -50,6 +52,14 @@ function handleCopyPackages() {
   const pkgList = packages.value.join('\n')
   navigator.clipboard.writeText(pkgList)
 }
+
+const buildRequestParams = computed(() => {
+  return {
+    packages: packages.value,
+    uci_defaults: uciScript.value,
+    rootfs_size_mb: rootFsSize.value,
+  } as Partial<BuildRequest>
+})
 </script>
 
 <template>
@@ -102,7 +112,18 @@ function handleCopyPackages() {
         size="small"
         class="h-40 max-h-80"
       />
-      <slot name="footer" :packages="packages" :uci-script="uciScript" />
+      <Panel :header="$t('advancedOptions')" toggleable collapsed>
+        <div class="pt-8">
+          <FloatLabel>
+            <InputNumber id="root_fs_size" v-model="rootFsSize" suffix="MB" />
+            <label for="root_fs_size">{{ $t('rootFsSize') }}</label>
+          </FloatLabel>
+        </div>
+      </Panel>
+      <slot
+        name="footer"
+        :params="buildRequestParams"
+      />
     </div>
   </Fieldset>
 </template>

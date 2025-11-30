@@ -33,3 +33,5 @@ packageManifest: Package manifest
 buildOutput: Build output
 inputPackagesHere: Input packages here
 remove: Remove
+advancedOptions: Advanced options
+rootFsSize: Root FS Size

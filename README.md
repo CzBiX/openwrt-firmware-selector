@@ -1,6 +1,6 @@
 # OpenWrt Firmware Selector
 
-Another firmware selector for OpenWRT, built with Vue 3 + PrimeVue.
+Another firmware selector for OpenWrt, built with Vue 3 + PrimeVue.
 
 ## Configuration
 

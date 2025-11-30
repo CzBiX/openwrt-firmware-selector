@@ -31,3 +31,5 @@ tag:
   stable: 安定した
 version: バージョン
 remove: 取り除く
+advancedOptions: 詳細オプション
+rootFsSize: root FS サイズ

@@ -9,6 +9,7 @@ export interface BuildRequest {
   profile: string
   packages: string[]
   defaults: string
+  rootfs_size_mb: number | null
 }
 
 interface BaseBuildingInfo {
