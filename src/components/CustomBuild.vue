@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { BuildRequest } from '~/utils/asu'
 import config from '~/config'
+import scriptUrl from '/uci-defaults.sh?url'
 
 const props = defineProps<{
   defaultPackages: string[]
@@ -15,7 +16,7 @@ const {
   data: templateData,
   isFetching: isTemplateFetching,
   execute: loadTemplate,
-} = useFetch(import.meta.resolve('/uci-defaults.sh'), {
+} = useFetch(scriptUrl, {
   immediate: false,
 }).text()
 
