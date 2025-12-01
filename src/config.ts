@@ -8,5 +8,5 @@ export default {
   GITHUB_REPO: import.meta.env.VITE_GITHUB_REPO || 'CzBiX/openwrt-firmware-selector',
 
   RECENT_MAJOR_VERSION: Number.parseInt(import.meta.env.VITE_RECENT_MAJOR_VERSION) || 23,
-  RECOMMENDED_PACKAGES: parsePackages(import.meta.env.VITE_RECOMMENDED_PACKAGES ?? 'luci'),
+  RECOMMENDED_PACKAGES: parsePackages(import.meta.env.VITE_RECOMMENDED_PACKAGES || 'luci'),
 }
