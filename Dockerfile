@@ -20,7 +20,6 @@ RUN --mount=from=build,source=/app,target=/app,rw find /app/dist -type f -exec g
     cp -r /app/dist/* .
 
 FROM ghcr.io/static-web-server/static-web-server:2
-RUN rm -rf /public/*
 COPY --from=preprocess /out /var/public
 
 # Enable pre-compressed files serving
