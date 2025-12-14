@@ -15,7 +15,7 @@ FROM alpine:latest AS preprocess
 RUN apk --no-cache add gzip
 WORKDIR /out
 
-# Compress files with Brotli
+# Compress files with gzip
 RUN --mount=from=build,source=/app,target=/app,rw find /app/dist -type f -exec gzip --best {} \; && \
     cp -r /app/dist/* .
 
