@@ -194,7 +194,7 @@ onUnmounted(() => {
     >
       <template #option="{ option }">
         <span>{{ option.value }}</span>
-        <Tag v-if="option.type === 'stable'" class="ml-1" rounded>
+        <Tag v-if="option.type === 'stable'" class="mx-1" rounded>
           {{ $t('tag.stable') }}
         </Tag>
       </template>
