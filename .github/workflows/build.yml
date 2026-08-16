@@ -16,14 +16,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
-
-      - name: Set node version
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: pnpm/setup@v2
         with:
-          node-version: 24
-          cache: pnpm
+          runtime: node@24
+          cache: true
 
       - name: Install
         run: pnpm i
@@ -39,7 +36,7 @@ jobs:
 
       - name: Setup Pages
         id: setup_pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
 
       - name: Build with default settings
         run: pnpm run build --base ${{ steps.setup_pages.outputs.base_path }}
@@ -57,7 +54,7 @@ jobs:
           VITE_RECOMMENDED_PACKAGES: ${{ vars.VITE_RECOMMENDED_PACKAGES }}
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: ./dist
 
@@ -66,7 +63,7 @@ jobs:
     needs: build
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       # Set up BuildKit Docker container builder to be able to build
       # multi-platform images and export cache
@@ -105,4 +102,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
