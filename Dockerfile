@@ -3,7 +3,7 @@ FROM node:lts-slim AS build
 RUN corepack enable
 
 WORKDIR /app
-COPY package.json pnpm-lock.yaml ./
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 ENV PNPM_HOME="/pnpm"
 RUN --mount=type=cache,target=/pnpm/store,id=pnpm pnpm install --frozen-lockfile
 
